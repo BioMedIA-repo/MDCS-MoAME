@@ -1,0 +1,16 @@
+CUDA_VISIBLE_DEVICES=0  python main.py --which_splits 5foldcv \
+              --dataset tcga_luad \
+              --data_root_dir /data/path/to/data_root_dir \
+              --modal coattn \
+              --model MDCS_MoAME \
+              --num_epoch 30 \
+              --batch_size 1 \
+              --loss nll_surv_l1 \
+              --lr 0.001 \
+              --optimizer SGD \
+              --scheduler None \
+              --alpha 0.0005 \
+              --beta 0.001 \
+              --gpu cuda:0  \
+              --use_h5 True \
+              --seed 3407
